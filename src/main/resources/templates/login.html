@@ -6,7 +6,7 @@
     <title>FalL - Pet Care Store</title>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/images/favicon.ico" />
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}" />
 
     <!-- Vendor CSS (Icon Font) -->
 
@@ -33,9 +33,9 @@
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
-    <link rel="stylesheet" href="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/css/vendor/vendor.min.css" />
-    <link rel="stylesheet" href="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/css/plugins/plugins.min.css" />
-    <link rel="stylesheet" href="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/css/style.min.css" />
+    <link rel="stylesheet" th:href="@{/css/vendor/vendor.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/plugins/plugins.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.min.css}" />
   </head>
 
   <body>
@@ -119,7 +119,7 @@
                             <a href="shop.html">
                               <img
                                 class="fit-image"
-                                src="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/images/header/mega-menu.png"
+                                th:src="@{/images/header/mega-menu.png}"
                                 alt="Megamenu Image"
                               />
                             </a>
@@ -355,37 +355,17 @@
               <!-- Login Title & Content End -->
 
               <!-- Form Action Start -->
-              <form action="#" method="post">
-                <!-- Input Email Start -->
-                <div class="single-input-item m-b-10">
-                  <input type="email" placeholder="Email or Username" />
-                </div>
-                <!-- Input Email End -->
-
-                <!-- Input Password Start -->
-                <div class="single-input-item m-b-10">
-                  <input type="password" placeholder="Enter your Password" />
-                </div>
-                <!-- Input Password End -->
-
-                <!-- Button/Forget Password Start -->
-                <div class="single-input-item m-b-15">
-                  <div class="login-reg-form-meta m-b-n15">
-                    <button
-                      class="btn btn btn-gray-deep btn-hover-primary m-b-15"
-                    >
-                      Sign In
-                    </button>
-                    <a href="#" class="forget-pwd m-b-15">Forget Password?</a>
-                  </div>
-                </div>
-                <!-- Button/Forget Password End -->
-
-                <!-- Lost Password & Creat New Account Start -->
-                <div class="lost-password">
-                  <a href="register.html">Creat Account</a>
-                </div>
-                <!-- Lost Password & Creat New Account End -->
+              <form class="form-signin" method="post" action="/login">
+                <h2 class="form-signin-heading">Please sign in to Pet Store</h2>
+                <p>
+                  <label for="username" class="sr-only">Username</label>
+                  <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+                </p>
+                <p>
+                  <label for="password" class="sr-only">Password</label>
+                  <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                </p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
               </form>
               <!-- Form Action End -->
             </div>
@@ -720,7 +700,7 @@
                   <a href="#">
                     <img
                       class="fit-image m-l-5"
-                      src="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/images/payment/payment_large.png"
+                      th:src="@{/images/payment/payment_large.png}"
                       alt="Payment Option Image"
                     />
                   </a>
@@ -973,10 +953,10 @@
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
-    <script src="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/js/vendor.min.js"></script>
-    <script src="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/js/plugins.min.js"></script>
+    <script th:src="@{/assets/js/vendor.min.js}"></script>
+    <script th:src="@{/assets/js/plugins.min.js}"></script>
 
     <!--Main JS-->
-    <script src="../../../../../../Desktop/amberhtml-10/amberhtml-10/amber-html-tf-v1.0.0/amber/assets/js/main.js"></script>
+    <script th:src="@{/assets/js/main.js}"></script>
   </body>
 </html>
